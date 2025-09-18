@@ -1,0 +1,7 @@
+#primitive data types
+a=5
+b=5.0
+c=True
+print("integer is:",a)
+print("float is:",b)
+print("bool is :",c)
