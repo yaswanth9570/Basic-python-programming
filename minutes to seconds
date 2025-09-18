@@ -1,0 +1,3 @@
+min=int(input("enter the min"))
+seconds=min*60
+print("number of seconds are:",seconds) 
