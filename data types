@@ -1,0 +1,9 @@
+#data types
+a=(10,20,30)
+b=[10,20,30]
+c={10,10,20,30,40}
+d={"one":1,"two":2}
+print(a)
+print(b)
+print(c)
+print(d)
