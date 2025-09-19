@@ -1,6 +1,9 @@
+total_amount=0
 def cal(item_price, quantity):
+  global total_amount
   amount_to_pay = item_price * quantity
   print("amount_to_pay:", amount_to_pay)
+  total_amount+=amount_to_pay
 def login():
     while True:
         ph_no = input("Enter the phone number: ")
@@ -18,33 +21,32 @@ def login():
             print("Incorrect OTP. Please try again.")
     password = input("Enter the password: ")
     print("Password is saved successfully")
-
 def menu():
-  cont = True
-  while cont:
+  global total_amount
+  while True :
     print("Welcome to food delivery system")
-    print("food items are :\n1.tiffin \n2.lunch \n3.juice items \n4.snacks \n5.show all of them")
+    print("food items are :\n1.tiffin \n2.lunch \n3.juice items \n4.snacks \n5.show all of them \n6.exit")
     x = int(input("enter the number:"))
     if x == 1:
       print("tiffins (1-4)")
       print("1.idli \n2.dosa \n3.puri \n4.pongal ")
-      tiffins = input("enter the tiffin name :")
-      if tiffins == "idli":
+      tiffins = int(input("enter the tiffin number :"))
+      if tiffins == 1:
         print("price of idli is :40")
         quantity = int(input("enter the quantity :"))
         item_price = 40
         cal(item_price, quantity)
-      elif tiffins == "dosa":
+      elif tiffins == 2:
         print("price of dosa is :60")
         quantity = int(input("enter the quantity :"))
         item_price = 60
         cal(item_price, quantity)
-      elif tiffins == "puri":
+      elif tiffins == 3:
         print("price of puri is :50")
         quantity = int(input("enter the quantity :"))
         item_price = 50
         cal(item_price, quantity)
-      elif tiffins == "pongal":
+      elif tiffins == 4:
         print("price of pongal is :60")
         quantity = int(input("enter the quantity :"))
         item_price = 60
@@ -127,10 +129,9 @@ def menu():
       print("\nNow you can order from the menu ")
     elif x==6:
       print("exit")
+      print(f"total amount is :{total_amount}")
+      break
     else:
       print("error")
-    z = input("press yes if you want to continue or no:")
-    if z == "no":
-      cont = False
 login()
 menu()
