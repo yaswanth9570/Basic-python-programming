@@ -1,0 +1,136 @@
+def cal(item_price, quantity):
+  amount_to_pay = item_price * quantity
+  print("amount_to_pay:", amount_to_pay)
+def login():
+    while True:
+        ph_no = input("Enter the phone number: ")
+        if ph_no.isdigit() and len(ph_no) == 10:
+            print("Phone number accepted")
+            break
+        else:
+            print("Invalid phone number. Please enter a 10-digit number.")
+    while True:
+        OTP = input("Enter the OTP: ")
+        if OTP.isdigit() and int(OTP) == 1234:
+            print("Successfully entered the correct OTP")
+            break
+        else:
+            print("Incorrect OTP. Please try again.")
+    password = input("Enter the password: ")
+    print("Password is saved successfully")
+
+def menu():
+  cont = True
+  while cont:
+    print("Welcome to food delivery system")
+    print("food items are :\n1.tiffin \n2.lunch \n3.juice items \n4.snacks \n5.show all of them")
+    x = int(input("enter the number:"))
+    if x == 1:
+      print("tiffins (1-4)")
+      print("1.idli \n2.dosa \n3.puri \n4.pongal ")
+      tiffins = input("enter the tiffin name :")
+      if tiffins == "idli":
+        print("price of idli is :40")
+        quantity = int(input("enter the quantity :"))
+        item_price = 40
+        cal(item_price, quantity)
+      elif tiffins == "dosa":
+        print("price of dosa is :60")
+        quantity = int(input("enter the quantity :"))
+        item_price = 60
+        cal(item_price, quantity)
+      elif tiffins == "puri":
+        print("price of puri is :50")
+        quantity = int(input("enter the quantity :"))
+        item_price = 50
+        cal(item_price, quantity)
+      elif tiffins == "pongal":
+        print("price of pongal is :60")
+        quantity = int(input("enter the quantity :"))
+        item_price = 60
+        cal(item_price, quantity)
+      else:
+        print("error")
+    elif x == 2:
+      print("Meals(1-2)")
+      print("1.veg_meals \n2.non-veg meals")
+      meals = int(input("enter the meals number:"))
+      if meals == 1:
+        print("price of veg meals is:120")
+        quantity = int(input("enter the quantity :"))
+        item_price = 120
+        cal(item_price, quantity)
+      elif meals == 2:
+        print("price of non-veg meals is:200")
+        quantity = int(input("enter the quantity :"))
+        item_price = 200
+        cal(item_price, quantity)
+      else:
+        print("error")
+    elif x == 3:
+      print("juice items(1-4)")
+      print("1.banana juice \n2.orange juice \n3.grape juice \n4.mango juice")
+      juice = input("enter the juice name :")
+      if juice == "banana":
+        print("price of banana juice is :40")
+        quantity = int(input("enter the quantity :"))
+        item_price = 40
+        cal(item_price, quantity)
+      elif juice == "orange":
+        print("price of orange juice is :40")
+        quantity = int(input("enter the quantity :"))
+        item_price = 40
+        cal(item_price, quantity)
+      elif juice == "grape":
+        print("price of grape juice is :50")
+        quantity = int(input("enter the quantity :"))
+        item_price = 50
+        cal(item_price, quantity)
+      elif juice == "mango":
+        print("price of mango juice is :70")
+        quantity = int(input("enter the quantity :"))
+        item_price = 70
+        cal(item_price, quantity)
+      else:
+        print("error")
+    elif x == 4:
+      print("snack items(1-4)")
+      print("1.lays \n2.kurkure \n3.bundhi")
+      snacks = input("enter the snack item name:")
+      if snacks == "lays":
+        print("price of lays is :20")
+        quantity = int(input("enter the quantity :"))
+        item_price = 20
+        cal(item_price, quantity)
+      elif snacks == "kurkure":
+        print("price  of kurkure:20")
+        quantity = int(input("enter the quantity :"))
+        item_price = 20
+        cal(item_price, quantity)
+      elif snacks == "bundhi":
+        print("price of bundhi is :40")
+        quantity = int(input("enter the quantity :"))
+        item_price = 40
+        cal(item_price, quantity)
+      else:
+        print("error")
+    elif x == 5:
+      print("food items are :\n1.tiffin \n2.lunch \n3.juice items \n4.snacks \n5.show all of them")
+      print("tiffins (1-4)")
+      print("1.idli \n2.dosa \n3.puri \n4.pongal ")
+      print("Meals(1-2)")
+      print("1.veg_meals \n2.non-veg meals")
+      print("juice items(1-4)")
+      print("1.banana juice \n2.orange juice \n3.grape juice \n4.mango juice")
+      print("snack items(1-4)")
+      print("1.lays \n2.kurkure \n3.bundhi")
+      print("\nNow you can order from the menu ")
+    elif x==6:
+      print("exit")
+    else:
+      print("error")
+    z = input("press yes if you want to continue or no:")
+    if z == "no":
+      cont = False
+login()
+menu()
